@@ -12,6 +12,7 @@ public class UniGuiController implements Initializable {
 
     public JFXTextArea txtSourceCode;
     public JFXTextArea txtObfuscatedCode;
+    public JFXTextArea txtExtraText;
     public JFXCheckBox chkComment;
     public JFXCheckBox chkTODO;
 
@@ -20,8 +21,20 @@ public class UniGuiController implements Initializable {
         chkComment.setSelected(true);
         txtObfuscatedCode.setText(Obfuscator.obfuscate(""));
         txtSourceCode.textProperty().addListener((observable, oldText, newText) -> {
-            txtObfuscatedCode.setText(Obfuscator.obfuscate(newText));
+            updateText();
         });
+    }
+
+    public void updateText() {
+        if (chkTODO.isSelected()) {
+            txtObfuscatedCode.setText(Obfuscator.obfuscate(txtSourceCode.getText(), ((txtExtraText.getText()).length() > 0) ? (" " + txtExtraText.getText() + " ") : "", Obfuscator.Modifier.TODO));
+        }
+        else if (chkComment.isSelected()){
+            txtObfuscatedCode.setText(Obfuscator.obfuscate(txtSourceCode.getText(), ((txtExtraText.getText()).length() > 0) ? (" " + txtExtraText.getText() + " ") : "", Obfuscator.Modifier.COMMENT));
+        }
+        else {
+            txtObfuscatedCode.setText(Obfuscator.obfuscate(txtSourceCode.getText(), "", Obfuscator.Modifier.NONE));
+        }
     }
 
 }
