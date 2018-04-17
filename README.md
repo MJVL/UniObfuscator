@@ -4,7 +4,7 @@ Simple Java Obfuscator that hides code in comment tags and Unicode garbage by ma
 ## Example
 Source Code
 ```Java
-System.out.println("Hello World!")
+System.out.println("Hello World!");
 ```
 Obfuscated Code
 ```
