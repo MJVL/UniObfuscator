@@ -2,6 +2,11 @@ package utility;
 
 public class Obfuscator {
 
+    public enum Modifier {
+        COMMENT,
+        TODO
+    }
+
     public static String obfuscate(String pString) {
         return obfuscate(pString, "");
     }
