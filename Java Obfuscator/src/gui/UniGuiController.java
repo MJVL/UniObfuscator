@@ -23,6 +23,9 @@ public class UniGuiController implements Initializable {
         txtSourceCode.textProperty().addListener((observable, oldText, newText) -> {
             updateText();
         });
+        txtExtraText.textProperty().addListener((observable, oldText, newText) -> {
+            updateText();
+        });
     }
 
     public void updateText() {
