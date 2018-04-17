@@ -2,6 +2,9 @@ package utility;
 
 public class Obfuscator {
 
+    public static final String BLOCK_START = "/*";
+    public static final String BLOCK_END = "*/";
+
     public enum Modifier {
         COMMENT,
         TODO
@@ -12,7 +15,7 @@ public class Obfuscator {
     }
 
     public static String obfuscate(String pString, String bComment) {
-        return "/*" + bComment + toUnicode("*/") + toUnicode(pString) + toUnicode("/*") + "*/";
+        return BLOCK_START + bComment + toUnicode(BLOCK_END) + toUnicode(pString) + toUnicode(BLOCK_START) + BLOCK_END;
     }
 
     public static String toUnicode(String uString) {
