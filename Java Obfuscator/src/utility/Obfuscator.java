@@ -1,3 +1,5 @@
+package utility;
+
 public class Obfuscator {
 
     public static String obfuscate(String pString) {
