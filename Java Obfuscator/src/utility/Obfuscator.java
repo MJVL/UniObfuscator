@@ -7,15 +7,16 @@ public class Obfuscator {
 
     public enum Modifier {
         COMMENT,
-        TODO
+        TODO,
+        NONE
     }
 
     public static String obfuscate(String pString) {
-        return obfuscate(pString, "");
+        return obfuscate(pString, "", Modifier.COMMENT);
     }
 
-    public static String obfuscate(String pString, String bComment) {
-        return BLOCK_START + bComment + toUnicode(BLOCK_END) + toUnicode(pString) + toUnicode(BLOCK_START) + BLOCK_END;
+    public static String obfuscate(String pString, String bComment, Modifier cModifier) {
+        return ((cModifier == Modifier.COMMENT || cModifier == Modifier.TODO) ?  BLOCK_START + bComment + toUnicode(BLOCK_END) : "") + toUnicode(pString) + ((cModifier == Modifier.COMMENT || cModifier == Modifier.TODO) ? toUnicode(BLOCK_START) + BLOCK_END : "");
     }
 
     public static String toUnicode(String uString) {
