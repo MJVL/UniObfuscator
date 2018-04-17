@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="gui.UniGuiController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="704.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.UniGuiController">
+    <children>
+        <AnchorPane layoutX="14.0" layoutY="23.0" prefHeight="361.0" prefWidth="333.0" style="-fx-background-color: #2196F3; -fx-background-radius: 5; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-border-radius: 5; -fx-border-image-width: 5;">
+            <children>
+                <Label layoutX="14.0" layoutY="5.0" text="Source Code" textFill="WHITE">
+                    <font>
+                        <Font name="Raleway" size="13.0" />
+                    </font></Label>
+            <JFXTextArea focusColor="#f36e21" layoutX="14.0" layoutY="27.0" prefHeight="313.0" prefWidth="306.0" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font name="Raleway" size="14.0" />
+               </font>
+            </JFXTextArea>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="357.0" layoutY="23.0" prefHeight="361.0" prefWidth="333.0" style="-fx-background-color: #2196F3; -fx-background-radius: 5; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-border-radius: 5; -fx-border-image-width: 5;">
+            <children>
+                <Label layoutX="14.0" layoutY="5.0" text="Obfuscated Code" textFill="WHITE">
+                    <font>
+                        <Font name="Raleway" size="13.0" />
+                    </font></Label>
+                <JFXTextArea focusColor="#f36e21" layoutX="14.0" layoutY="27.0" prefHeight="313.0" prefWidth="306.0" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE">
+                    <font>
+                        <Font name="Raleway" size="14.0" />
+                    </font>
+                </JFXTextArea>
+            </children>
+        </AnchorPane>
+    </children>
 </AnchorPane>
