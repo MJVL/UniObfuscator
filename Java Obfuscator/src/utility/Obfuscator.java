@@ -1,6 +1,6 @@
 package utility;
 
-public class Obfuscator {
+public final class Obfuscator {
 
     public static final String BLOCK_START = "/*";
     public static final String BLOCK_END = "*/";
@@ -11,6 +11,8 @@ public class Obfuscator {
         COMMENT,
         TODO
     }
+    
+    private Obfuscator() {}
 
     public static String obfuscate(String pString) {
         return obfuscate(pString, "", Modifier.COMMENT);
