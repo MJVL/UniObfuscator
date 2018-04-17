@@ -8,7 +8,6 @@ public class Obfuscator {
         return "/*" + bComment + toUnicode("*/") + toUnicode(pString) + toUnicode("/*") + "*/";
     }
 
-
     public static String toUnicode(String uString) {
         String unicode = "";
         for (char c: uString.toCharArray()) {
