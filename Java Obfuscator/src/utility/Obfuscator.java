@@ -4,14 +4,14 @@ public final class Obfuscator {
 
     public static final String BLOCK_START = "/*";
     public static final String BLOCK_END = "*/";
-    public static final String TODO = " TODO: ";
+    public static final String TODO = "TODO:";
 
     public enum Modifier {
         NONE,
         COMMENT,
         TODO
     }
-    
+
     private Obfuscator() {}
 
     public static String obfuscate(String pString) {
@@ -19,7 +19,7 @@ public final class Obfuscator {
     }
 
     public static String obfuscate(String pString, String bComment, Modifier cModifier) {
-        return ((cModifier == Modifier.COMMENT || cModifier == Modifier.TODO) ?  BLOCK_START + ((cModifier == Modifier.TODO) ? TODO : "") + bComment + toUnicode(BLOCK_END) : "") + toUnicode(pString) + ((cModifier == Modifier.COMMENT || cModifier == Modifier.TODO) ? toUnicode(BLOCK_START) + BLOCK_END : "");
+        return ((cModifier == Modifier.COMMENT || cModifier == Modifier.TODO) ?  BLOCK_START + ((cModifier == Modifier.TODO) ? " " + TODO : "") + bComment + toUnicode(BLOCK_END) : "") + toUnicode(pString) + ((cModifier == Modifier.COMMENT || cModifier == Modifier.TODO) ? toUnicode(BLOCK_START) + BLOCK_END : "");
     }
 
     public static String toUnicode(String uString) {
