@@ -27,12 +27,8 @@ public class UniGuiController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         chkComment.setSelected(true);
         txtObfuscatedCode.setText(Obfuscator.obfuscate(""));
-        txtSourceCode.textProperty().addListener((observable, oldText, newText) -> {
-            updateText();
-        });
-        txtExtraText.textProperty().addListener((observable, oldText, newText) -> {
-            updateText();
-        });
+        txtSourceCode.textProperty().addListener((observable, oldText, newText) -> updateText());
+        txtExtraText.textProperty().addListener((observable, oldText, newText) -> updateText());
         imgCopy.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> copyToClipboard());
     }
 
