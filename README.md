@@ -1,6 +1,9 @@
 # UniObfuscator
 Simple Java Obfuscator that hides code in comment tags and Unicode garbage by making use of Java's Unicode Escapes.
-
+## What am I looking at?
+All entered characters are converted into their unicode equivalent. Comment tags and a TODO label can also be added to further obfuscate the code and make it appear as being ignored in your editor. These all give the appearance of giberish while still being functional lines.
+## Is my code secure now?
+Bluntly, no. No matter what you do your code will be reverse-engineerable. This tool only performs a simple obfuscation and can be easily converted back into readable characters. This is more of a tool to stop people in a lab from glancing and stealing code than an enterprise-grade solution. If you're interested in more in-depth code obfuscation techniques check out this [guide](https://www.excelsior-usa.com/articles/java-obfuscators.html).
 ## Example
 Source Code
 ```Java
