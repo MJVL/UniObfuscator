@@ -16,7 +16,7 @@
                     <font>
                         <Font name="Raleway" size="13.0" />
                     </font></Label>
-            <JFXTextArea fx:id="txtSourceCode" focusColor="#f36e21" layoutX="14.0" layoutY="27.0" prefHeight="313.0" prefWidth="306.0" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE">
+            <JFXTextArea fx:id="txtSourceCode" focusColor="#f36e21" layoutX="14.0" layoutY="36.0" prefHeight="304.0" prefWidth="306.0" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE">
                <font>
                   <Font name="Monospaced Regular" size="14.0" />
                </font>
@@ -29,7 +29,7 @@
                     <font>
                         <Font name="Raleway" size="13.0" />
                     </font></Label>
-                <JFXTextArea fx:id="txtObfuscatedCode" editable="false" focusColor="#f36e21" layoutX="14.0" layoutY="27.0" prefHeight="313.0" prefWidth="306.0" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE">
+                <JFXTextArea fx:id="txtObfuscatedCode" editable="false" focusColor="#f36e21" layoutX="14.0" layoutY="36.0" prefHeight="304.0" prefWidth="306.0" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE">
                     <font>
                         <Font name="Monospaced Regular" size="14.0" />
                     </font>
