@@ -7,8 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import utility.Obfuscator;
-
-import java.awt.*;
+import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.net.URL;
@@ -27,12 +26,8 @@ public class UniGuiController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         chkComment.setSelected(true);
         txtObfuscatedCode.setText(Obfuscator.obfuscate(""));
-        txtSourceCode.textProperty().addListener((observable, oldText, newText) -> {
-            updateText();
-        });
-        txtExtraText.textProperty().addListener((observable, oldText, newText) -> {
-            updateText();
-        });
+        txtSourceCode.textProperty().addListener((observable, oldText, newText) -> updateText());
+        txtExtraText.textProperty().addListener((observable, oldText, newText) -> updateText());
         imgCopy.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> copyToClipboard());
     }
 
