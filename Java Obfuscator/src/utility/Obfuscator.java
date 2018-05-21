@@ -12,7 +12,9 @@ public final class Obfuscator {
         TODO
     }
 
-    private Obfuscator() {}
+    private Obfuscator() {
+        throw new AssertionError();
+    }
 
     public static String obfuscate(String pString) {
         return obfuscate(pString, "", Modifier.COMMENT);
