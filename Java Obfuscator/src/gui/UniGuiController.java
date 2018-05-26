@@ -4,6 +4,7 @@ import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextArea;
 import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Tooltip;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import utility.Obfuscator;
@@ -25,6 +26,8 @@ public class UniGuiController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        Tooltip.install(imgClear, new Tooltip("Clear"));
+        Tooltip.install(imgCopy, new Tooltip("Copy"));
         chkComment.setSelected(true);
         txtObfuscatedCode.setText(Obfuscator.obfuscate(""));
         txtSourceCode.textProperty().addListener((observable, oldText, newText) -> updateText());
