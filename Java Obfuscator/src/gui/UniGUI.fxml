@@ -21,6 +21,11 @@
                   <Font name="Monospaced Regular" size="14.0" />
                </font>
             </JFXTextArea>
+            <ImageView fx:id="imgClear" fitHeight="72.0" fitWidth="29.0" layoutX="291.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: transparent;">
+               <image>
+                  <Image url="@assets/clear-icon.png" />
+               </image>
+            </ImageView>
             </children>
         </AnchorPane>
         <AnchorPane layoutX="357.0" layoutY="23.0" prefHeight="361.0" prefWidth="333.0" style="-fx-background-color: #2196F3; -fx-background-radius: 5; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-border-radius: 5; -fx-border-image-width: 5;">
