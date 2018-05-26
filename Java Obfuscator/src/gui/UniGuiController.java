@@ -21,6 +21,7 @@ public class UniGuiController implements Initializable {
     public JFXCheckBox chkComment;
     public JFXCheckBox chkTODO;
     public ImageView imgCopy;
+    public ImageView imgClear;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -29,6 +30,7 @@ public class UniGuiController implements Initializable {
         txtSourceCode.textProperty().addListener((observable, oldText, newText) -> updateText());
         txtExtraText.textProperty().addListener((observable, oldText, newText) -> updateText());
         imgCopy.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> copyToClipboard());
+        imgClear.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> txtSourceCode.setText(""));
     }
 
     public void updateText() {
