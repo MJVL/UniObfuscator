@@ -2,17 +2,16 @@ package gui;
 
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextArea;
-import javafx.event.EventHandler;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Tooltip;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
-import utility.Obfuscator;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Tooltip;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import utility.Obfuscator;
 
 public class UniGuiController implements Initializable {
 
@@ -49,8 +48,8 @@ public class UniGuiController implements Initializable {
     }
 
     public void copyToClipboard() {
-        Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
-        clpbrd.setContents(new StringSelection(txtObfuscatedCode.getText()), null);
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(new StringSelection(txtObfuscatedCode.getText()), null);
     }
 
 }
