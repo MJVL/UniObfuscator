@@ -1,0 +1,13 @@
+# Build/Maven
+target/
+
+# IntelliJ
+.idea/
+*.iml
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
