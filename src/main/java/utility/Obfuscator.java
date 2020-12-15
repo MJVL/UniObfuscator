@@ -25,11 +25,9 @@ public final class Obfuscator {
     }
 
     public static String toUnicode(String uString) {
-        String unicode = "";
-        for (char c: uString.toCharArray()) {
-            unicode += toUnicode(c);
-        }
-        return unicode;
+        StringBuilder unicode = new StringBuilder();
+        uString.chars().forEachOrdered(c -> unicode.append(toUnicode((char)c)));
+        return unicode.toString();
     }
 
     public static String toUnicode(Character uChar) {
