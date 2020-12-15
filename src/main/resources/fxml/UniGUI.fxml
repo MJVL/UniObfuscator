@@ -23,7 +23,7 @@
             </JFXTextArea>
             <ImageView fx:id="imgClear" fitHeight="72.0" fitWidth="29.0" layoutX="291.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: transparent;">
                <image>
-                  <Image url="@gui/assets/clear-icon.png" />
+                  <Image url="@../icons/clear-icon.png" />
                </image>
             </ImageView>
             </children>
@@ -41,7 +41,7 @@
                 </JFXTextArea>
             <ImageView fx:id="imgCopy" fitHeight="72.0" fitWidth="29.0" layoutX="297.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: transparent;">
                <image>
-                  <Image url="@gui/assets/copy-icon.png" />
+                  <Image url="@../icons/copy-icon.png" />
                </image>
             </ImageView>
             </children>
