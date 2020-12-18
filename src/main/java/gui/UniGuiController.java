@@ -2,17 +2,18 @@ package gui;
 
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextArea;
-import javafx.event.EventHandler;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Tooltip;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
-import utility.Obfuscator;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Tooltip;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import utility.Obfuscator;
 
 public class UniGuiController implements Initializable {
 
@@ -29,6 +30,12 @@ public class UniGuiController implements Initializable {
         Tooltip.install(imgClear, new Tooltip("Clear"));
         Tooltip.install(imgCopy, new Tooltip("Copy"));
         chkComment.setSelected(true);
+        chkTODO.selectedProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue) chkComment.setSelected(true);
+        });
+        chkComment.selectedProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue) chkTODO.setSelected(false);
+        });
         txtObfuscatedCode.setText(Obfuscator.obfuscate(""));
         txtSourceCode.textProperty().addListener((observable, oldText, newText) -> updateText());
         txtExtraText.textProperty().addListener((observable, oldText, newText) -> updateText());
@@ -49,8 +56,8 @@ public class UniGuiController implements Initializable {
     }
 
     public void copyToClipboard() {
-        Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
-        clpbrd.setContents(new StringSelection(txtObfuscatedCode.getText()), null);
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(new StringSelection(txtObfuscatedCode.getText()), null);
     }
 
 }
