@@ -30,7 +30,7 @@ Note that this type of obfuscation should not be performed on class or method he
 ## Is my code secure now?
 Bluntly, no. No matter what you do your code will be reverse-engineerable. This tool only performs a simple obfuscation and can be easily converted back into readable characters. This is more of a tool to stop people in a lab from glancing and stealing code than an enterprise-grade solution. If you're interested in more in-depth code obfuscation techniques check out this [guide](https://www.excelsior-usa.com/articles/java-obfuscators.html).
 
-## Example
+## Examples
 Source Code
 ```Java
 System.out.println("Hello, world!");
@@ -39,3 +39,18 @@ Obfuscated Code
 ```
 /*\u002a\u002f\u0053\u0079\u0073\u0074\u0065\u006d\u002e\u006f\u0075\u0074\u002e\u0070\u0072\u0069\u006e\u0074\u006c\u006e\u0028\u0022\u0048\u0065\u006c\u006c\u006f\u002c\u0020\u0077\u006f\u0072\u006c\u0064\u0021\u0022\u0029\u003b\u002f\u002a*/
 ```
+Source Code
+```Java
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		/* TODO: Fix this. \u002a\u002f\u0053\u0079\u0073\u0074\u0065\u006d\u002e\u006f\u0075\u0074\u002e\u0070\u0072\u0069\u006e\u0074\u006c\u006e\u0028\u0022\u0057\u006f\u0077\u002c\u0020\u0069\u0074\u0027\u0073\u0020\u0061\u0020\u0073\u0065\u0063\u0072\u0065\u0074\u0020\u006d\u0065\u0073\u0073\u0061\u0067\u0065\u0021\u0022\u0029\u003b\u002f\u002a*/
+	}
+}
+```
+Output
+```
+Hello World                                                                                                                                                                       
+Wow, it's a secret message!
+```
+Run this example live [here](https://onlinegdb.com/pmLpy35Mb).
