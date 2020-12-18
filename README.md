@@ -1,7 +1,11 @@
 # UniObfuscator
-Simple Java Obfuscator that hides code in comment tags and Unicode garbage by making use of Java's Unicode Escapes.
+Simple Java Obfuscator that hides code in comment tags and Unicode garbage by making use of Java's Unicode escapes.
 
-## Prerequisities
+<div align="center">
+    <img src="src/main/resources/images/app-screenshot.png" alt="screenshot of UniObfuscator gui">
+</div>
+
+## Prerequisites
 * Java >= 8
 * Maven
 
