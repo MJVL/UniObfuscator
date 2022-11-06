@@ -28,7 +28,7 @@ In Java, it's acceptable to use unicode escapes in replacement or in conjunction
 Note that this type of obfuscation should not be performed on class or method headers as this may disrupt your IDE or compilation. Stick to inner code blocks for a smooth experience.
 
 ## Is my code secure now?
-Bluntly, no. No matter what you do your code will be reverse-engineerable. This tool only performs a simple obfuscation and can be easily converted back into readable characters. This is more of a tool to stop people in a lab from glancing and stealing code than an enterprise-grade solution. If you're interested in more in-depth code obfuscation techniques check out this [guide](https://www.excelsior-usa.com/articles/java-obfuscators.html).
+Bluntly, no. No matter what you do your code will be reverse-engineerable. This tool only performs a simple obfuscation and can be easily converted back into readable characters. This is more of a tool to stop people in a lab from glancing and stealing code than an enterprise-grade solution.
 
 ## Examples
 Source Code
